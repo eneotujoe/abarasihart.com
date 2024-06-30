@@ -12,7 +12,7 @@ export async function POST(req: Request) {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
-    } as nodemailer.TransporterOptions)
+    } as nodemailer.TransportOptions)
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: 'eneotujoe@gmail.com',
