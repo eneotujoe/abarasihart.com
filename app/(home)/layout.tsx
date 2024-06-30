@@ -78,12 +78,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         
-        <ThemeProvider
+        {/* <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        >
+        > */}
             <Header />
             <main>
               {children}
@@ -91,7 +91,7 @@ export default function RootLayout({
               <SpeedInsights />
             </main>
             <Footer />
-        </ThemeProvider>
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );
