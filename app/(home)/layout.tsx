@@ -10,9 +10,9 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { siteConfig } from '../config/site'
 
-export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
-  return <NextThemesProvider {...props}>{children}</NextThemesProvider>
-}
+// export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
+//   return <NextThemesProvider {...props}>{children}</NextThemesProvider>
+// }
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
