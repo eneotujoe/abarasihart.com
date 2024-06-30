@@ -1,20 +1,16 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
-import { ThemeProvider as NextThemesProvider } from "next-themes"
-import { type ThemeProviderProps } from "next-themes/dist/types"
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import dynamic from 'next/dynamic'
 
+import { ThemeProvider } from "@/components/theme-provider"
 import Header from '@/components/header'
 import { siteConfig } from '../config/site'
 
 
 const DrawerIcon = dynamic(() => import('@/components/drawer'), { ssr: false })
-// export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
-//   return <NextThemesProvider {...props}>{children}</NextThemesProvider>
-// }
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -80,12 +76,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         
-        {/* <ThemeProvider
+        <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        > */}
+        >
           <main>
             <div className='md:flex hidden'>
               <Header />
@@ -97,7 +93,7 @@ export default function RootLayout({
               <DrawerIcon />
             </div>
           </main>
-        {/* </ThemeProvider> */}
+        </ThemeProvider>
       </body>
     </html>
   );

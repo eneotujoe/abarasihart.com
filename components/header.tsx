@@ -51,7 +51,7 @@ export function Navbar() {
 export default function Header() {
   
   return (
-    <header className="sticky w-full top-0 border-b border-white bg-white bg-opacity-40 backdrop-filter backdrop-blur-lg z-10">
+    <header className="sticky w-full top-0 border-b border-white shadow-sm bg-white bg-opacity-40 backdrop-filter backdrop-blur-lg z-10">
       <nav className='flex'>
         <div className="flex justify-between items-center min-h-11 w-full left-0 px-5 z-10">
           <div className="uppercase font-bold">{ siteConfig.name }</div>

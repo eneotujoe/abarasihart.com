@@ -1,18 +1,15 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "../globals.css";
-import { ThemeProvider as NextThemesProvider } from "next-themes"
-import { type ThemeProviderProps } from "next-themes/dist/types"
-import { Analytics } from '@vercel/analytics/react';
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "../globals.css"
+import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
+import { ThemeProvider } from "@/components/theme-provider"
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { siteConfig } from '../config/site'
 
-// export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
-//   return <NextThemesProvider {...props}>{children}</NextThemesProvider>
-// }
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -78,12 +75,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         
-        {/* <ThemeProvider
+        <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        > */}
+        >
             <Header />
             <main>
               {children}
@@ -91,7 +88,7 @@ export default function RootLayout({
               <SpeedInsights />
             </main>
             <Footer />
-        {/* </ThemeProvider> */}
+        </ThemeProvider>
       </body>
     </html>
   );
