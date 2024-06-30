@@ -22,7 +22,7 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-col justify-center items-center">
-          <h1 className="text-4xl sm:text-6xl text-transparent text-center font-black" style={{ WebkitTextStroke: '2px white' }}>>
+          <h1 className="text-4xl sm:text-6xl text-transparent text-center font-black" style={{ WebkitTextStroke: '2px white' }}>
             Abarasi Hart (PhD)
           </h1>
         </div>
